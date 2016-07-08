@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4" ng-repeat="data in datas">
+			<div>
+			
+				<div class="imgMenu">
+					<a ng-href="./graph/{{ data.dataConcept }}/{{ data.dataFilter }}/{{ data.title }}/{{ data.id }}" type="button">
+						<div class="granulado">
+							<h1 class="headlinesMenu"> {{ data.title }} </h1>
+						</div>
+					</a>	
+				</div>
+			
+			</div>
+		</div>
+	</div>
+</div>

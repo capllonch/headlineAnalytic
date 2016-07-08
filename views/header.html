@@ -1,0 +1,30 @@
+<h1 align="center" class="titleIndex">HEADLINE ANALYTIC</h1>
+<div class="mainNav" ng-controller="indexController">
+    <div class="container">
+      <div class="buttonNav">
+        <a ng-href="./">Index</a>
+      </div>
+      <div class="buttonNav dropdown">
+        <a href="#" class="dropdownLI dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Graphs <span class="glyphicon glyphicon-stats"></span></a>
+          <ul class="dropdown-menu">
+            <li ng-repeat="data in datas">
+              <a ng-href="./graph/{{ data.dataConcept }}/{{ data.dataFilter }}/{{ data.title }}/{{ data.id }}">{{ data.title }}</a>
+            </li>
+          </ul>
+      </div>
+    </div>
+</div>
+
+<!--nav ng-controller="indexController" class="mainNav navbar navbar-default">
+	<ul class="nav navbar-nav">
+        <li class="leftItem"><a ng-href="/">Index <span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdownLI dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Graphs <span class="glyphicon glyphicon-stats"></span></a>
+          <ul class="dropdown-menu">
+            <li ng-repeat="data in datas">
+            	<a ng-href="./graph/{{ data.dataConcept }}/{{ data.dataFilter }}/{{ data.title }}">{{ data.title }}</a>
+            </li>
+          </ul>
+        </li>
+    </ul>
+</nav-->

@@ -1,0 +1,32 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<div id="mainGR"></div>				
+		</div>
+		<div class="col-md-4 infoCard">
+			<div>
+				<h4> {{ infoCard.dataName }} </h4>
+				<h5>Geo: {{ graphCountry }} </h5>
+				<h4>Unit: {{ infoCard.unit }}</h4>
+				<p>Time: Since quarter {{ myObj.since.substring(5,6) }} of {{ myObj.since.substring(0,4) }} to quarter {{ myObj.to.substring(5,6) }} of {{ myObj.to.substring(0,4) }}</p>
+				<p>Source: {{ infoCard.source }}</p>
+				<a href="#" type="button" class="dropdown-toggle btn btn-default countriesBtn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other countries</a>
+					<ul class="dropdown-menu">
+						<li ng-repeat="country in myObj.geo.label"><a ng-click="repeatFunction($index)" id="otherCountry" type="button" href="">{{ country }}</a></li>
+					</ul>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<h3 class="titleSearch">{{ infosearch }}</h3>
+	</div>
+	<div class="row newsRow">
+			<div class="newsDiv col-md-4" ng-repeat="headline in headlines">
+			  <h4><a ng-href="{{ headline.location.uri }}">{{ headline.title.title }}</a></h4>
+			  <p>{{ headline.summary.excerpt }}</p>
+			  <time datetime="{{ headline.lifecycle.initialPublishDateTime }}">
+			  	{{ headline.lifecycle.initialPublishDateTime.substring(0,10) }}
+			  </time>
+			</div>
+	</div>
+</div>
