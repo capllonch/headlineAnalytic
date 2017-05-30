@@ -25,13 +25,3 @@ Feature: Login for personal use
     Then Application show us a confirm message
     And User press the ok button
     And Application shows login screen
-
-@valid
-  Scenario Outline: Login fail
-    When the user enters an invalid "<identificationId>" and "<password>" on login form
-    Then invalid login message is displayed
-
-    Examples:
-      | identificationId      | password |
-      | 666000000             | aa654312 |
-      | prueba3@tiktakpay.com | bb123456 |
