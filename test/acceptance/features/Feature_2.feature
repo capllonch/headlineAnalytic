@@ -4,3 +4,5 @@
 Feature: Feature 2
     as an user
   I want to login into the TikTakPay system
+
+  Scenario: new step
